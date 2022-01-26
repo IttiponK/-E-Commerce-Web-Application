@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "84397625-d973-4e53-959b-ec3bd75d490f",
+		"name": "test ics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product List",
+			"item": [
+				{
+					"name": "Filter product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gender\":\"your gender M or W\",\r\n    \"category\":\"your color category\",\r\n    \"size\":\"your size\",\r\n    \"index\":\"number of page\",\r\n    \"slice\":\"number of product per page\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/get-with-filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-with-filter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create order",
+			"item": [
+				{
+					"name": "Create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"owner\":\"your name\",\r\n    \"address\":\"your address\",\r\n    \"quantity\":\"number of quantity\",\r\n    \"productid\":\"number of productid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/create-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check own order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/check-your-order/your owner name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"check-your-order",
+								"your owner name"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionid\":\"your transactionid\",\r\n    \"bank_name\":\"your bank name\",\r\n    \"payment_slip\":\"url of payment slip\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start\":\"date format example 2022-01-01\",\r\n    \"end\":\"date format example 2022-02-02\",\r\n    \"payment_status\":\"number of payment status 0 is pending, 1 is success\",\r\n    \"index\":\"number of page\",\r\n    \"slice\":\"number of product per page\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/filter-transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"filter-transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
