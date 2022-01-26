@@ -95,7 +95,7 @@
 			"name": "Payment",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Payment",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -128,7 +128,7 @@
 			"name": "Admin",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Admin",
 					"request": {
 						"method": "POST",
 						"header": [],
